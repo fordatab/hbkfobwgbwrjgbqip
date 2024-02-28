@@ -57,8 +57,8 @@ asm_doRow:
     ldrb r9, [r1, r6]       // Set r9 to the value at index
     mov r10, #0             // Set r10 to zero temporarily
     sub r5, r10, r9         // Subtract r5 by 0
-
-
+    
+    // TODO: TRY TO DO WITHOUT PUSHING r0-r3 TO OPTIMIZE SPEED
     // Inner Block
     push {r0-r3}           // Push r0, r1 to preserve registers    // s += src[getIndex(cols, getModVal(row+z, rows), getModVal(x+y, cols))];
     mov r0, r2           // Load curRow into r0
